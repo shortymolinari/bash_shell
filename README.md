@@ -318,6 +318,8 @@ Una de las opciones más utilizadas para **Read**
 
 + **-r**: Toma el botón de retroceso o *backspace* como un caracter y no borra ningun otro caracter previamente escrito.
 
++ **-t**: Especifica un tiempo de espera para la entrada en segundos
+
 ---
 
 ## Validar información
