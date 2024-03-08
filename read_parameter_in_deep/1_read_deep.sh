@@ -18,7 +18,7 @@ total=$(( $1 + $2 ))
 echo First passed parameter is $1.
 echo Second passed parameter is $2.
 echo Last passed parameter is ${!#}
-echo Total is $total.
+echo "Total is $total".
 echo "-------------------------------------------------------"
 echo "The first variable \$* method: $*"
 echo "-------------------------------------------------------"

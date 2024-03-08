@@ -206,7 +206,9 @@ Hay algunos identificadores para cuando ejecutamos un script con argumentos
 
 ---
 
-## Shifting parameter variable / Variable de parámetro de cambio
+## Variable de parámetro de cambio
+
+#### Shifting parameter variable
 
 `shift` : ejemplo en este archivo, 2_shifting_parameter_variable.sh
 
@@ -221,6 +223,54 @@ variable `$1 ==> descartada`.
 variable `$0 ==> (el nombre del script) tal como está.`
 
 Tenga cuidado al usar el comando shift, ya que no puede recuperar el parámetro desplazado.
+
+---
+
+## Opciones
+
+Las opciones son letras individuales con un guión enfrente.
+
+`-a -b -c`
+
+
+
+## Separar opciones de parámetros
+
+Usamos el doble guión (--) al final de la lista de opciones. Después de que el shell ve el doble guión, trata las entradas restantes como parámetros y no como opciones.
+
+`sh script -a -b -c -- 5 10 15`
+
+
+
+---
+
+## Procesar opciones con valores
+
+ `sh script -a value1 -b -c value2`
+
+---
+
+## Opciones estádar o reservadas en linux
+
+| -a  | List all items.                        |
+| --- | -------------------------------------- |
+| -c  | Get the count of items.                |
+| -d  | Output directory.                      |
+| -e  | Expand items.                          |
+| -f  | To specify a file.                     |
+| -h  | To show the help page.                 |
+| -i  | To ignore character case.              |
+| -l  | To list a text.                        |
+| -n  | To say no for a question.              |
+| -o  | To send output to a file or so.        |
+| -q  | Keep silent; don’t ask the user.       |
+| -r  | To process something recursively.      |
+| -s  | Stealth mode.                          |
+| -v  | Verbose mode.                          |
+| -x  | Specify executable.                    |
+| -y  | To say yes without prompting the user. |
+
+
 
 ---
 

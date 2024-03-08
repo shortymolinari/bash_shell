@@ -26,4 +26,4 @@ done
 #tail myFile.txt
 
 # Indicar que se desea ver 20 lineas del mismo archivo
-#tail -n 20 myFile.txt
+#tail -n 20 myFile.txt ->

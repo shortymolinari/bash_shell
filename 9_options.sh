@@ -15,7 +15,7 @@ while [ -n "$1" ]
             -a) echo "-a opción utilizada";;
             -b) echo "-b opción utilizada";;
             -c) echo "-c opción utilizada";;
-            *) echo "$! no es una opción";;
+             *) echo "$! no es una opción";;
         esac
         shift
 done
