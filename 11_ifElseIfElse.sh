@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Programa para ejemplificar el uso de la sentencia de decisión if, else if, else
 # Autor: shortymolinari
 

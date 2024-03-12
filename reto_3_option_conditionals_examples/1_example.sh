@@ -1,6 +1,4 @@
 #! /bin/bash
-#Reto 3
-#Autor Jose Suarez
 
 read -p "Ingrese su nombre: " nombre
 

@@ -232,15 +232,11 @@ Las opciones son letras individuales con un guión enfrente.
 
 `-a -b -c`
 
-
-
 ## Separar opciones de parámetros
 
 Usamos el doble guión (--) al final de la lista de opciones. Después de que el shell ve el doble guión, trata las entradas restantes como parámetros y no como opciones.
 
 `sh script -a -b -c -- 5 10 15`
-
-
 
 ---
 
@@ -269,8 +265,6 @@ Usamos el doble guión (--) al final de la lista de opciones. Después de que el
 | -v  | Verbose mode.                          |
 | -x  | Specify executable.                    |
 | -y  | To say yes without prompting the user. |
-
-
 
 ---
 
@@ -360,3 +354,101 @@ Para comparar números se usan los operadores:
 **(())** es para validaciones aritméticas (sólo números implicados; preferible en especial cuando hay operaciones aritméticas). Usa los operadores lógicos estándar.
 
 ---
+
+# Expresiones Condicionales
+
+###### **COMPARANDO CADENAS**
+
+| [[  | [   |
+| --- | --- |
+| >   | >   |
+| <   | <   |
+| =   | =   |
+| !=  | !=  |
+
+###### **COMPARANDO ENTEROS**
+
+| [[  | [   |               |
+| --- | --- | ------------- |
+| -gt | -gt | mayor         |
+| -lt | -lt | menor         |
+| -ge | -ge | mayor o igual |
+| -le | -le | menor o igual |
+| -eq | -eq | igual         |
+| -ne | -ne | distinto      |
+
+Ejemplo:
+ `[[ 001 = 1 ]]` es falso. Ya que la cadena de caractéres. No es la misma.
+
+`[[ 001 -eq 1 ]]` es verdadero. Ya que los ceros a la izquierda no tienen valor. Por tanto 1 es igual a 1
+
+###### **OPERADORES BOOLEANOS**
+
+| [[   | [   |
+| ---- | --- |
+| &&   | -a  |
+| \|\| | -o  |
+
+###### **AGRUPACIÓN**
+
+Para agrupar operaciones booleanas puedes utilizar paréntesis con los dobles corchetes, mientras que en el caso de los corchetes simples deberás utilizar los paréntesis pero *escapados*.
+
+###### **OTROS COMPARADORES INTERESANTES**
+
+- `-d` te permitirá saber si es un directorio y si existe
+- `-e` lo mismo que en el caso anterior pero para archivos
+- `-r` en este caso te permite saber si el archivo tiene permiso de lectura
+- `-s` con esta opción puedes saber si el tamaño del archivo es mayor que cero. Es decir, que no se trata de un archivo vacío
+- `-w` te permitirá identificar si el archivo tienen permisos de escritura
+- `-x` lo mismo que en el caso anterior pero para el caso de permisos de ejecución.
+
+###### Corchetes simples [  ] vs Corchetes Dobles [[  ]]
+
+Los corchetes dobles resultan ser una mejora respecto a los simples. Así, las diferencias entre uno y otro son las siguientes:
+
+1. No tienes que utilizar las comillas con las variables, los corchetes dobles trabajan perfectamente con los espacios. Así `[ -f "$file" ]` es equivalente a `[[ -f $file ]]`.
+2. Con `[[` puedes utilizar los operadores `||` y && , asi como < y > para las comparaciones de cadena.
+3. Puedes utilizar el operador `=~` para expresiones regulares, compo por ejemplo `[[ $respuesta =~ ^s(i)?$ ]]`
+4. También puedes utilizar comodines como por ejemplo en la expresión `[[ abc = a\* ]]`
+
+Es posible que te preguntes por la razón para seguir utilizando `[` corchete simple en lugar de doble. La cuestión es por **compatibilidad**.
+
+
+ Si utilizas Bash en diferentes equipos es posible que te encuentres  alguna imcompatibilidad. Así que depende de ti y de donde lo vayas a utilizar.
+
+
+
+---
+
+# Sentencias Case
+
+En la sentencia **Case** el objetivo principal es validar una expresión simple, puede ser un número, una cadena o un rango de valores
+
+```bash
+case EXPRESSION in
+
+  PATTERN_1)
+    STATEMENTS
+    ;;
+
+  PATTERN_2)
+    STATEMENTS
+    ;;
+
+  PATTERN_N)
+    STATEMENTS
+    ;;
+
+  *)
+    STATEMENTS
+    ;;
+esac
+```
+
+---
+
+# Sentencias de iteración
+
+###### Arreglos
+
+Los Arreglos son un tipo de variables que puede contener N cantidad de valores ya sean cadenas de texto, numéricos, etc. Estos siempre empiezan desde la posición número 0.
