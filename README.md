@@ -459,8 +459,6 @@ Los Arreglos son un tipo de variables que puede contener N cantidad de valores y
 La sentencia For es esa que se suele utilizar mucho cuando se quiere recorrer o iterar sobre una lista de valores. En Bash también soporta el For loop expression el cual tiene
  tres bloques, tanto de inicialización, condición e iteración.
 
-
-
 Formas para implementar un ciclo en bash
 
 1. Sintaxis para recorrer listas
@@ -520,3 +518,36 @@ done
 - Utilizamos la sentencia `continue` para continuar con la siguiente iteración.
 
 ---
+
+# Archivos y directorios
+
+- Para crear directorios utilizamos el comando **mkdir** seguido del nombre que queremos colocar.
+
+- Para crear archivos utilizamos el comando **touch** seguido del nombre que queremos colocar.
+
+---
+
+# Escribir dentro de archivos
+
+`>> # Concatena` 
+
+`>  # Reemplaza`
+
+`tee`
+
+[Bash: Write to File | Linuxize](https://linuxize.com/post/bash-write-to-file/)
+
+
+
+#### Redirection Operators
+
+The general format for redirecting and writing output to a file is as follows
+
+```bash
+output > filename 
+output >> filename 
+```
+
+---
+
+# Operaciones archivos

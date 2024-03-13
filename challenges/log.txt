@@ -1,0 +1,68 @@
+ebfactory/2024_03_13__17:36:58
+ebfactory/2024_03_13__17:38:00
+ebfactory/2024_03_13__17:40:39
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+ebfactory/2024_03_13__17:40:50
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+Log entered: 2024_03_13__17:42:25 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+Log entered: 2024_03_13__17:42:31 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+Log entered: 2024_03_13__17:42:36 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+Log entered: 2024_03_13__17:43:12 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+
+Log entered: 2024_03_13__17:43:14 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+
+Log entered: 2024_03_13__17:43:16 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+Log entered: 2024_03_13__17:43:26 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+Log entered: 2024_03_13__17:43:28 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
+Log entered: 2024_03_13__17:43:30 - by: ebfactory
+----------------------------------------
+The current working directory is: /Users/ebfactory/Projects-DEV/Platzi/bash_shell/reto5
+You are logged in as ebfactory
+----------------------------------------
+
