@@ -413,10 +413,7 @@ Los corchetes dobles resultan ser una mejora respecto a los simples. Así, las d
 
 Es posible que te preguntes por la razón para seguir utilizando `[` corchete simple en lugar de doble. La cuestión es por **compatibilidad**.
 
-
  Si utilizas Bash en diferentes equipos es posible que te encuentres  alguna imcompatibilidad. Así que depende de ti y de donde lo vayas a utilizar.
-
-
 
 ---
 
@@ -452,3 +449,74 @@ esac
 ###### Arreglos
 
 Los Arreglos son un tipo de variables que puede contener N cantidad de valores ya sean cadenas de texto, numéricos, etc. Estos siempre empiezan desde la posición número 0.
+
+15_arreglos.sh
+
+---
+
+# For
+
+La sentencia For es esa que se suele utilizar mucho cuando se quiere recorrer o iterar sobre una lista de valores. En Bash también soporta el For loop expression el cual tiene
+ tres bloques, tanto de inicialización, condición e iteración.
+
+
+
+Formas para implementar un ciclo en bash
+
+1. Sintaxis para recorrer listas
+
+```bash
+for i in lista
+do
+#Instrucciones
+done
+```
+
+2. Sintaxis para rango de valores
+
+```bash
+for i in $(seq rango)
+do
+#Instrucciones
+done
+```
+
+El comando `seq` puede ser utilizado de las siguientes formas:
+
+- `seq [último valor]`
+
+- `seq [primer valor] [último valor]`
+
+- `seq [primer valor] [incremento] [último valor]`
+3. Sintaxis heredada de C
+
+```bash
+for (( inicializador; condición; contador ))
+do
+#Instrucciones
+done
+```
+
+---
+
+# While loop
+
+El ciclo `while` permite ejecutar un bloque de instrucciones mientras se cumpla la condición.
+
+Primero comprueba que en efecto se cumple la condición dada y entonces, ejecuta el segmento de código contenido entre las palabras `do` y `done`, así sucesivamente hasta que la condición no se cumpla.
+
+```bash
+while [ condición ]
+do
+#Bloque de instrucciones
+done
+```
+
+---
+
+## Break y continue
+
+- Utilizamos la sentencia `break` para salir de la ejecucion de los loop `for`, `while`. Es decir sale de la ejecución actual
+- Utilizamos la sentencia `continue` para continuar con la siguiente iteración.
+
+---
