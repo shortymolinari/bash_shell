@@ -537,8 +537,6 @@ done
 
 [Bash: Write to File | Linuxize](https://linuxize.com/post/bash-write-to-file/)
 
-
-
 #### Redirection Operators
 
 The general format for redirecting and writing output to a file is as follows
@@ -550,4 +548,13 @@ output >> filename
 
 ---
 
-# Operaciones archivos
+# Empaquetamiento TAR, GZIP y PBZIP 2
+
+El empaquetamiento es un tema interesante para manejar respaldos u otro tipo de archivos para poder reducir el tamaño de uno o varios archivos para luego distribuirlos a través de la red u otra ubicación dentro del equipo.
+
+- `tar`: permite empaqueta múltiples archivos
+- `gzip`: Este solo nos permite empaquetar un único archivo, pero nos permite optimizar el tamaño del empaquetado. Suele usarse en conjunto con `tar`
+  + Cuando se empaqueta con gzip el empaquetamiento anterior se elimina
+- `pbzip2`: Este comando permite soporta el multicore, multiprocesador. Solo podemos empaquetar un solo archivo.
+
+---
