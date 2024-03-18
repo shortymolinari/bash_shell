@@ -4,57 +4,72 @@
 
 opcion=0
 
-#While "infinito" se va a ejecuatr hasta que ingresemos una sentencia de salida
+#While "infinito" se va a ejecutar hasta que ingresemos una sentencia de salida
 while :
 do
-    #Limpiar la pantalla
-    clear
-    echo -e "
-                    __             ________
-    _______   _____/  |_  ____    /  _____/
-    \_  __ \_/ __ \   __\/  _ \  /   __  \
-     |  | \/\  ___/|  | (  <_> ) \  |__\  \
-     |__|    \___  >__|  \____/   \_____  /
-                 \/                     \/
-    "
+   #Limpieza de pantalla
+   clear
+   echo "_______________________"
+   echo "    Menu de opciones   "
+   echo "_______________________"
+   echo -e "\n"
+   echo "1. Instalar Postgres"
+   echo "2. Desinstalar Postgres"
+   echo "3. Crear un backup"
+   echo "4. Restaurar backup"
+   echo "5. empaquetar y comprimir "
+   echo "6. Enviar por ssh "
+   echo "7. Salir"
+   echo -e "\n"
+   read -n1 -p "Elija una Opcion :" option
+   echo -e "\n"
 
-
-    #Desplegar el menú de opciones
-    echo "_________________________________________"
-    echo "PG-UTIL - Programa de Utilidad de Postgres"
-    echo "_________________________________________"
-    echo "                MENÚ PRINCIPAL           "
-    echo "_________________________________________"
-    echo "1. Instalar Postgres"
-    echo "2. Desinstalar Postgres"
-    echo "3. Sacar un respaldo"
-    echo "4. Restar respaldo"
-    echo "5. Salir"
-
-    #Leer los datos del usuario - capturar información
-    read -n1 -p "Ingrese una opción [1-5]:" opcion
-
-    #Validar la opción ingresada
-    case $opcion in
-        1)
-            echo -e "\nInstalar postgres....."
+   case $option in
+      1)
+         echo "Instalando Postgres...."
+         if [ -f  ~/logs/instalandoPostgres.log ]; then
+            echo "El fichero ya existe...>> Agregando log "
+            echo "$(date '+%F %H %M %S')  $(whoami)"  >> ~/logs/instalandoPostgres.log
             sleep 3
-            ;;
-        2)
-            echo -e "\nDesinstalar postgres...."
+         else
+            echo "el Fichero no existe > creando fichero "
+            echo "$(date '+%F %H %M %S')  $(whoami)" > ~/logs/instalandoPostgres.log
             sleep 3
-            ;;
-        3)
-            echo -e "\nSacar respaldo..."
+         fi
+      ;;
+      2)
+         echo "Desinstalando Postgres"
+         date '+%F %H %M %S' > ~/logs/DesinstalandoPosgtres.log
+         sleep 3
+      ;;
+      3)
+         echo "Crear Backup "
+         date '+%F %H %M %S'> ~/logs/SacarRespaldo.log
+         sleep 3
+      ;;
+      4)
+         echo "Restaurar Backup "
+         date '+%F %H %M %S' > ~/logs/RestaurandoRespaldo.log
+         sleep 3
+      ;;
+      5)
+         echo "Empaquetando y comprimiendo todos los logs "
+         tar -cvf Logs.tar ~/logs
+         if  [ -e Logs.tar ]; then
+            echo "Comprimiendo el archivos  .... status OK!"
+            gzip -9 Logs.tar
             sleep 3
-            ;;
-        4)
-            echo -e "\nRestaurar respaldo..."
-            sleep 3
-            ;;
-        5)
-            echo -e "\nSalir del Programa"
-            exit 0
-            ;;
-    esac
+         else
+            echo "No se pudo comprimir... archivo logs.tar no encontrado "
+         fi
+      ;;
+      6)
+         echo "enviando por SSH "
+         #rsync -avz $(pwd) userDestino@host(ip):direccionDestino
+         sleep 3
+      ;;
+      7) echo "Saliendo "
+         exit 0
+      ;;
+   esac
 done
